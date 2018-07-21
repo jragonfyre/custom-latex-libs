@@ -1,0 +1,406 @@
+
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{dsfont}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{accents}
+\usepackage{enumerate}
+\usepackage{twoopt}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{scalerel}
+\usepackage{mathdots}
+\usepackage{verbatim}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{xparse}
+\usepackage{url}
+\usepackage{breakurl}
+\usepackage{float}
+
+\setlength{\headheight}{15.2 pt}
+
+\pagestyle{fancy}
+
+\newcommand{\ds}{\displaystyle}
+\mathchardef\mhyph="2D
+\newcommand{\qeds}{\ensuremath{\blacksquare}}
+\renewcommand{\qedsymbol}{\qeds}
+\newcommand{\rtwo}{\ensuremath{\mathbb{R}^2}}
+\newcommand{\rn}[1][n]{\ensuremath{\mathbb{R}^{#1}}}
+\newcommandtwoopt{\rtor}[2][][]{\ensuremath{\mathbb{R}^{#1}\to\mathbb{R}^{#2}}}
+
+%\newcommand{\ang}[2][1.75ex]{\scaleleftright[#1]{\langle}{#2}{\rangle}}
+\newcommand{\ang}[1]{\angles*{{#1}}}
+\newcommandtwoopt{\blf}[2][\cdot][\cdot]{\ang{{#1},{#2}}}
+\newcommand{\diag}{\mathrm{Diag}}
+
+\renewcommand{\phi}{\varphi}
+\renewcommand{\bar}{\overline}
+\renewcommand{\tilde}{\widetilde}
+%\newcommand{\inv}{\ensuremath{^{-1}}}
+\newcommand{\id}{\textrm{id}}
+\newcommand{\Id}{\textrm{Id}}
+
+\newcommand{\bmat}{\begin{pmatrix}}
+\newcommand{\emat}{\end{pmatrix}}
+
+\newcommand{\sigmaalgebra}{$\sigma$-algebra}
+
+\newcommand{\units}[1]{{#1}^\times}
+\newcommand{\unitsof}[1]{\units{\of*{#1}}}
+
+\newcommand{\AAA}{\ensuremath{\mathscr{A}}}
+\newcommand{\BBB}{\ensuremath{\mathscr{B}}}
+\newcommand{\CCC}{\ensuremath{\mathscr{C}}}
+\newcommand{\DDD}{\ensuremath{\mathscr{D}}}
+\newcommand{\EEE}{\ensuremath{\mathscr{E}}}
+\newcommand{\FFF}{\ensuremath{\mathscr{F}}}
+\newcommand{\GGG}{\ensuremath{\mathscr{G}}}
+\newcommand{\HHH}{\ensuremath{\mathscr{H}}}
+\newcommand{\III}{\ensuremath{\mathscr{I}}}
+\newcommand{\JJJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\KKK}{\ensuremath{\mathscr{K}}}
+\newcommand{\LLL}{\ensuremath{\mathscr{L}}}
+\newcommand{\MMM}{\ensuremath{\mathscr{M}}}
+\newcommand{\NNN}{\ensuremath{\mathscr{N}}}
+\newcommand{\SSS}{\ensuremath{\mathscr{S}}}
+\newcommand{\TTT}{\ensuremath{\mathscr{T}}}
+\newcommand{\UUU}{\ensuremath{\mathscr{U}}}
+\newcommand{\VVV}{\ensuremath{\mathscr{V}}}
+\newcommand{\WWW}{\ensuremath{\mathscr{W}}}
+\newcommand{\XXX}{\ensuremath{\mathscr{X}}}
+\newcommand{\YYY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\calA}{\ensuremath{\mathcal{A}}}
+\newcommand{\calB}{\ensuremath{\mathcal{B}}}
+\newcommand{\calC}{\ensuremath{\mathcal{C}}}
+\newcommand{\calD}{\ensuremath{\mathcal{D}}}
+\newcommand{\calE}{\ensuremath{\mathcal{E}}}
+\newcommand{\calF}{\ensuremath{\mathcal{F}}}
+\newcommand{\calG}{\ensuremath{\mathcal{G}}}
+\newcommand{\calH}{\ensuremath{\mathcal{H}}}
+\newcommand{\calI}{\ensuremath{\mathcal{I}}}
+\newcommand{\calJ}{\ensuremath{\mathcal{J}}}
+\newcommand{\calK}{\ensuremath{\mathcal{K}}}
+\newcommand{\calL}{\ensuremath{\mathcal{L}}}
+\newcommand{\calM}{\ensuremath{\mathcal{M}}}
+\newcommand{\calN}{\ensuremath{\mathcal{N}}}
+\newcommand{\calO}{\ensuremath{\mathcal{O}}}
+\newcommand{\calP}{\ensuremath{\mathcal{P}}}
+\newcommand{\calQ}{\ensuremath{\mathcal{Q}}}
+\newcommand{\calR}{\ensuremath{\mathcal{R}}}
+\newcommand{\calS}{\ensuremath{\mathcal{S}}}
+\newcommand{\calT}{\ensuremath{\mathcal{T}}}
+\newcommand{\calU}{\ensuremath{\mathcal{U}}}
+\newcommand{\calV}{\ensuremath{\mathcal{V}}}
+\newcommand{\calW}{\ensuremath{\mathcal{W}}}
+\newcommand{\calX}{\ensuremath{\mathcal{X}}}
+\newcommand{\calY}{\ensuremath{\mathcal{Y}}}
+\newcommand{\calZ}{\ensuremath{\mathcal{Z}}}
+\newcommand{\boldN}{\ensuremath{\mathbf{N}}}
+\newcommand{\boldP}{\ensuremath{\mathbf{P}}}
+\newcommand{\boldQ}{\ensuremath{\mathbf{Q}}}
+\newcommand{\boldA}{\ensuremath{\mathbf{A}}}
+\newcommand{\boldB}{\ensuremath{\mathbf{B}}}
+\newcommand{\OOO}{\ensuremath{\mathcal{O}}}
+\newcommand{\mmm}{\ensuremath{\mathfrak{m}}}
+\renewcommand{\aa}{\ensuremath{\mathfrak{a}}}
+\newcommand{\bb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\cc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\mm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\nn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\pp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\qq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\uu}{\ensuremath{\mathfrak{u}}}
+\newcommand{\vv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\nilrad}{\ensuremath{\mathfrak{N}}}
+\newcommand{\Jacobrad}{\ensuremath{\mathfrak{R}}}
+\newcommand{\Jrad}{\ensuremath{\mathfrak{R}}}
+
+\newcommand{\inQ}{\in\mathbb{Q}}
+\newcommand{\inN}{\in\mathbb{N}}
+\newcommand{\inR}{\in\mathbb{R}}
+\newcommand{\inZ}{\in\mathbb{Z}}
+\newcommand{\inI}{\in\mathbb{I}}
+\newcommand{\inC}{\in\mathbb{C}}
+\newcommand{\toi}{\to\infty}
+\renewcommand{\AA}{\ensuremath{\mathbb{A}}}
+\newcommand{\CC}{\ensuremath{\mathbb{C}}}
+\newcommand{\DD}{\ensuremath{\mathbb{D}}}
+\newcommand{\EE}{\ensuremath{\mathbb{E}}}
+\newcommand{\FF}{\ensuremath{\mathbb{F}}}
+\newcommand{\HH}{\ensuremath{\mathbb{H}}}
+\newcommand{\II}{\ensuremath{\mathbb{I}}}
+\newcommand{\NN}{\ensuremath{\mathbb{N}}}
+\newcommand{\PP}{\ensuremath{\mathbb{P}}}
+\newcommand{\QQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\RR}{\ensuremath{\mathbb{R}}}
+\newcommand{\TT}{\ensuremath{\mathbb{T}}}
+\newcommand{\ZZ}{\ensuremath{\mathbb{Z}}}
+
+\newcommand{\AAn}{\ensuremath{\mathds{A}}}
+\newcommand{\DDn}{\ensuremath{\mathds{D}}}
+\newcommand{\EEn}{\ensuremath{\mathds{E}}}
+\newcommand{\NNn}{\ensuremath{\mathds{N}}}
+\newcommand{\RRn}{\ensuremath{\mathds{R}}}
+\newcommand{\CCn}{\ensuremath{\mathds{C}}}
+\newcommand{\FFn}{\ensuremath{\mathds{F}}}
+\newcommand{\HHn}{\ensuremath{\mathds{H}}}
+\newcommand{\PPn}{\ensuremath{\mathds{P}}}
+\newcommand{\QQn}{\ensuremath{\mathds{Q}}}
+\newcommand{\ZZn}{\ensuremath{\mathds{Z}}}
+\newcommand{\IIn}{\ensuremath{\mathds{I}}}
+
+\newcommand{\RRII}{\ensuremath{\RR^\II}}
+%\newcommand{\FF}[1][p]{\ensuremath{\mathbb{F}_{#1}}}
+\newcommand{\ZP}[1][p]{\ZZ/{#1}\ZZ}
+\newcommand{\UP}[1][p]{\unitsof{\ZP[#1]}}
+\newcommand{\preprsp}[2][n+1]{\ensuremath{{#2}^{#1}\setminus(0,\ldots,0)}}
+\newcommand{\prsp}[2][n]{{\ensuremath{\mathbb{P}^#1\of*{#2}}}}
+
+%\newcommand{\catname}[1]{\ensuremath{\mathbf{\mathrm{#1}}}}
+\newcommand{\catname}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\Grp}{\catname{Grp}}
+\newcommand{\Set}{\catname{Set}}
+\newcommand{\RMod}[1][R]{\ensuremath{{#1}\mhyph\catname{Mod}}}
+\newcommand{\Ralg}[1][R]{\ensuremath{{#1}\mhyph\catname{Alg}}}
+\newcommand{\CRing}{\catname{CRing}}
+\newcommand{\Rng}{\catname{Rng}}
+\newcommand{\Ring}{\catname{Ring}}
+\newcommand{\kVect}[1][k]{\ensuremath{{#1}\mhyph\catname{Vect}}}
+\newcommand{\Ab}{\catname{Ab}}
+\newcommand{\Sch}{\catname{Sch}}
+
+
+\newcommand{\Free}{\operatorname{Free}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\cycle}[1]{\bmat #1 \emat}
+\newcommand{\GL}[1][n]{\operatorname{GL}_{#1}}
+\newcommand{\SL}[1][n]{\operatorname{SL}_{#1}}
+\newcommand{\PGL}[1][n]{\operatorname{PGL}_{#1}}
+\newcommand{\PSL}[1][n]{\operatorname{PSL}_{#1}}
+
+
+\newcommand{\inclusion}{\hookrightarrow}
+\newcommand{\into}{\hookrightarrow}
+\newcommand{\normalin}{\trianglelefteq}
+\newcommand{\propernormalin}{\vartriangleleft}
+\newcommand{\nmin}{\normalin}
+\newcommand{\nminneq}{\propernormalin}
+% from http://tex.stackexchange.com/questions/4624/a-symbol-for-the-quotient-of-two-objects 
+\newcommand{\bigslant}[2]{{\left.\raisebox{.2em}{$\ds{#1}$}\middle/\raisebox{-.2em}{$\ds{#2}$}\right.}}
+\newcommand{\quotient}[2]{\bigslant{#1}{#2}}
+\newcommand{\sdprod}{\rtimes}
+\newcommand{\contains}{\supseteq}
+\newcommand{\containsneq}{\supsetneq}
+
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Max}{\operatorname{Max}}
+\newcommand{\MaxSpec}{\operatorname{MaxSpec}}
+\newcommand{\fr}{\operatorname{Fr}}
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\cl}{\operatorname{Cl}}
+\newcommand{\intr}{\operatorname{Int}}
+\newcommand{\compl}{\operatorname{Cmpl}}
+\newcommand{\lspan}{\operatorname{span}}
+\newcommand{\clospan}{\vee}
+\newcommand{\Disc}{\operatorname{Disc}}
+\newcommand{\osc}{\operatorname{osc}}
+\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\range}{\operatorname{range}}
+\newcommand{\essrange}{\operatorname{ess range}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\sign}{\operatorname{sign}}
+\newcommand{\trdeg}{\operatorname{tr.deg}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\alev}{\ensuremath{\text{\ a.e.}}}
+\newcommand{\Borel}[1]{\calB\of*{#1}}
+\newcommand{\ordP}[1][p]{\operatorname{ord}_{#1}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\divs}{\operatorname{div}}
+\newcommand{\updens}{\overline{\delta}}
+\newcommand{\lodens}{\underline{\delta}}
+\newcommand{\divides}{\mid}
+\newcommand{\val}[1][p]{v_{#1}}
+\newcommand{\dirlim}{\varinjlim}
+\newcommand{\invlim}{\varprojlim}
+\newcommand{\tens}{\otimes}
+\newcommand{\Tens}{\bigotimes}
+\newcommand{\toby}{\xrightarrow}
+
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Endo}{\operatorname{Endo}}
+
+\newcommand{\Hol}{\operatorname{Hol}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Inn}{\operatorname{Inn}}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\Out}{\operatorname{Out}}
+\newcommand{\Stab}{\operatorname{Stab}}
+\newcommand{\Tors}{\operatorname{Tors}}
+\newcommand{\Frac}{\operatorname{Frac}}
+\newcommand{\Jac}{\operatorname{Jac}}
+\newcommand{\Syl}[1][p]{\operatorname{Syl}_{#1}}
+\newcommand{\Dsum}{\bigoplus}
+\newcommand{\dsum}{\oplus}
+\newcommand{\dom}{\operatorname{dom}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Supp}{\operatorname{Supp}}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\newcommand{\LC}{\operatorname{LC}}
+
+\newcommand{\ab}{\ensuremath{^{\textrm{ab}}}}
+\newcommand{\nth}{\ensuremath{^{\textrm{th}}}}
+
+\newcommand{\commrect}[8]{%
+\ensuremath{%
+\begin{tikzcd}[ampersand replacement=\&]%
+    {#1} \arrow{r}{{#2}} \arrow[swap]{d}{{#4}} \& {#3} \arrow{d}{{#5}} \\%
+    {#6}\arrow{r}{{#7}} \& {#8}%
+\end{tikzcd}%
+}%
+}
+
+\newcommand{\pruf}{\emph{Proof.}}
+\newcommand{\soln}{\emph{Solution.}}
+\newcommand{\eptwo}{\frac{\epsilon}{2}}
+\newcommand{\pitwo}{\frac{\pi}{2}}
+
+
+\newcommand{\properSubset}{\subset}
+\renewcommand{\subset}{\subseteq}
+\renewcommand\hat\widehat
+\renewcommand\tilde\widetilde
+\renewcommand\bar\overline
+
+\newcommand{\del}{\nabla}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\fsqmat}[4]{\ensuremath{\left(\begin{array}{cc} #1 & #2 \\ #3 & #4 \end{array}\right)}}
+\newcommand{\cvtwo}[2]{\ensuremath{\left(\begin{array}{c} #1\\ #2 \end{array}\right)}}
+\newcommand{\flipmat}{\bmat 0 & 1 \\ 1 & 0 \emat}
+\newcommand{\rotmat}[1][\theta]{\bmat \cos #1 & -\sin #1 \\ \sin #1 & \cos #1 \emat}
+
+%\def\closure#1#2#3{%
+  % #1 = amount to shift bar to right 
+  % #2 = amount to shave off the ends of the bar.
+  % #3 = the symbol
+%  \mkern#1mu\mkern#2mu
+%  \overline{\mkern-#1mu \mkern-#2mu #3\mkern-#2mu \mkern#1mu}%
+%  \mkern#2mu\mkern-#1mu}
+
+\newcommand{\powerset}[1]{\ensuremath{\mathcal{P}(#1)}}
+
+%\newcommand{\closure}[2][3]{%
+%    \ensuremath{\overline{{}\mkern#1mu#2\mkern-#1mu}}}
+\makeatletter
+\newsavebox\myboxA
+\newsavebox\myboxB
+\newlength\mylenA
+
+\newcommand*\xoverline[2][0.97]{%
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+\makeatother
+\makeatletter
+\newcommand{\bigperp}{%
+  \mathop{\mathpalette\bigp@rp\relax}%
+  \displaylimits
+}
+
+\newcommand{\bigp@rp}[2]{%
+  \vcenter{
+    \m@th\hbox{\scalebox{\ifx#1\displaystyle2.1\else1.5\fi}{$#1\perp$}}
+  }%
+}
+\makeatother
+
+\newcommand{\closure}[1]{\xoverline{#1}}
+
+%\newcommand{\interior}[1]{\ensuremath{\accentset{\circ}{#1}}}
+\newcommand{\interior}[1]{\ensuremath{{#1}^{\circ}}}
+\newcommand{\boundary}[1]{\ensuremath{\partial #1}}
+
+\newcommand{\nullset}{\varnothing}
+
+\newcommandtwoopt{\seq}[3][n][\inN]{\of*{#3}_{{#1}{#2}}}
+\newcommand{\seqlim}[1][n]{\ensuremath{\lim_{#1\to\infty}}}
+
+\newcommand{\inv}{^{-1}}
+\newcommand{\stel}{^{*}}
+
+\newcommand{\partder}[2][x]{\ensuremath{\frac{\partial #2}{\partial #1}}}
+
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Split}{\operatorname{Split}}
+\newcommand{\Der}{\operatorname{Der}}
+
+
+%\newcommand{\dlambda}{\fsqmat{\lambda}{0}{0}{\lambda}}
+%\newcommand{\rtheta}{\fsqmat{\cos\theta}{-\sin\theta}{\sin\theta}{\cos\theta}}
+
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\set{\{}{\}}
+\DeclarePairedDelimiter\braces{\{}{\}}
+\DeclarePairedDelimiter\of{(}{)}
+\DeclarePairedDelimiter\norm{\|}{\|}
+\DeclarePairedDelimiter\abs{|}{|}
+\DeclarePairedDelimiter\angles{\langle}{\rangle}
+\DeclarePairedDelimiter\braks{[}{]}
+
+\newcommand{\fracp}[2][p]{\braces{{#1}}_p}
+
+\theoremstyle{plain} % default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{proposition}[thm]{Proposition}
+\newtheorem{problem}[thm]{Problem}
+%\newtheorem*{proof}{Proof.}
+\newtheorem*{corollary}{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{prf}{Proof.}
+\newtheorem*{cor}{Corollary}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{defn}{Definition}[section]
+\newtheorem{conj}{Conjecture}[section]
+\newtheorem{exmp}{Example}[section]
+
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+\newtheorem{case}{Case}
+
